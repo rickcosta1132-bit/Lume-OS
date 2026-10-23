@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#1A1A1A"/>
+      <stop offset="60%" stop-color="#080808"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </radialGradient>
+
+    <!-- Spectrum Glow -->
+    <radialGradient id="spectrumGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00FF88" stop-opacity="0.35"/>
+      <stop offset="40%" stop-color="#38BDF8" stop-opacity="0.2"/>
+      <stop offset="70%" stop-color="#A855F7" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Laser Blade Gradients for Monogram L -->
+    <linearGradient id="bladeVertical" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#00FF88"/>
+      <stop offset="70%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#A855F7"/>
+    </linearGradient>
+
+    <linearGradient id="bladeHorizontal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7"/>
+      <stop offset="40%" stop-color="#FF3B30"/>
+      <stop offset="75%" stop-color="#FF8A26"/>
+      <stop offset="100%" stop-color="#FFCC00"/>
+    </linearGradient>
+
+    <!-- Bevel Highlights -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#333333"/>
+      <stop offset="45%" stop-color="#1A1A1A"/>
+      <stop offset="55%" stop-color="#111111"/>
+      <stop offset="100%" stop-color="#282828"/>
+    </linearGradient>
+
+    <!-- Drop Shadows & Filters -->
+    <filter id="neonBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="subtleShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- App Icon Base Squircle -->
+  <rect width="512" height="512" rx="118" fill="url(#bgGrad)"/>
+  <rect x="6" y="6" width="500" height="500" rx="112" fill="none" stroke="url(#borderGrad)" stroke-width="4"/>
+
+  <!-- Inner Ambient Halo -->
+  <circle cx="256" cy="256" r="210" fill="url(#spectrumGlow)"/>
+
+  <!-- High-Precision Futuristic Monogram 'L' & 'O' -->
+  <g filter="url(#subtleShadow)">
+    <!-- Subtle Inner Shield / Glass Plate -->
+    <rect x="74" y="74" width="364" height="364" rx="84" fill="#0D0D0D" stroke="#222222" stroke-width="2.5"/>
+
+    <!-- Geometric L Spine Glow -->
+    <path d="M176 138 V322 C176 348.5 197.5 370 224 370 H336"
+          stroke="url(#bladeVertical)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"
+          fill="none" filter="url(#neonBlur)" opacity="0.65"/>
+
+    <!-- Sharp Monogram L Foreground -->
+    <path d="M176 138 V322 C176 348.5 197.5 370 224 370 H336"
+          stroke="url(#bladeVertical)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"
+          fill="none"/>
+
+    <!-- Lume OS Luminous Pulse Aperture (representing the 7 modules) -->
+    <!-- Finance (#00FF88) -->
+    <circle cx="176" cy="138" r="14" fill="#00FF88" filter="url(#neonBlur)"/>
+    <circle cx="176" cy="138" r="9" fill="#FFFFFF"/>
+
+    <!-- Casa (#FF8A26) -->
+    <circle cx="224" cy="370" r="10" fill="#FF8A26"/>
+
+    <!-- Docs (#38BDF8) -->
+    <circle cx="176" cy="230" r="9" fill="#38BDF8"/>
+
+    <!-- Corpo (#FF3B30) -->
+    <circle cx="280" cy="370" r="9" fill="#FF3B30"/>
+
+    <!-- Garagem (#FFCC00) -->
+    <circle cx="336" cy="370" r="14" fill="#FFCC00" filter="url(#neonBlur)"/>
+    <circle cx="336" cy="370" r="9" fill="#FFFFFF"/>
+
+    <!-- Floating Orb: Lume Nexus (Purple #A855F7 & Silver #E5E5E5) -->
+    <circle cx="320" cy="190" r="38" fill="#141414" stroke="#333333" stroke-width="3"/>
+    <circle cx="320" cy="190" r="26" fill="url(#bladeHorizontal)" filter="url(#neonBlur)" opacity="0.8"/>
+    <circle cx="320" cy="190" r="16" fill="#A855F7"/>
+    <circle cx="320" cy="190" r="7" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Metallic Corner Highlights -->
+  <path d="M84 120 C84 98 100 84 122 84" stroke="rgba(255,255,255,0.2)" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>

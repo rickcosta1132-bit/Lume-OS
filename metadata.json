@@ -1,0 +1,6 @@
+{
+  "name": "LUME OS",
+  "description": "LUME OS - Sistema Operacional Pessoal Black Premium por Lume Labs com 7 módulos integrados e banco Supabase.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
